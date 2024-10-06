@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Layout Example</title>
+    <style>
+      /* Global styles for layout */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+
+      /* Layout for the entire viewport */
+      body,
+      html {
+        height: 100%;
+      }
+
+
+      /* Row 1 (Horizontal block) */
+      .header {
+        background-color: purple;
+        height: 9vh; /* 9% of the viewport height */
+        width: 100vw; /* Full width of viewport */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+
+      /* Row 2 (Main content) */
+      .main {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+      }
+
+      .sideblocks1 > div {
+        background-color: #39a8db;
+        height: 33.33%; /* Each row takes 30% of Block 3 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        color: white;
+      }
+
+
+      /* Block 2 (full height block) */
+      .block2 {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+      }
+
+
+      .sideblocks2 > div {
+        background-color: #f9c60c;
+        height: 50%; /* Each row takes 30% of Block 3 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Row 1: Full width header (Block Element) -->
+    <div class="header"> Thrisha</div>
+
+
+    <!-- Row 2: 3-column layout using Grid -->
+    <div class="main">
+      <!-- Block 1: 3 rows inside first column -->
+      <div class="sideblocks1">
+        <div>
+          <ul>
+            <li>
+              <a href="https://sdmit.in/" target="_blank" rel="noopener noreferrer" >sdmit</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- Block 2: Full height block in the middle -->
+      <div class="block2">Name: Thrisha <br> Address:Bangadimajalu house kokkada post and villege,belthangady taluk,D.K</div>
+
+      <!-- Block 3: 3 rows inside third column -->
+      <div class="sideblocks2">
+        <div><img src="image1.jpg" height="100%" alt=""></div>
+        <div>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zqvSlNo9baI?si=Sa0WvgZ5_-9aIeU3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
